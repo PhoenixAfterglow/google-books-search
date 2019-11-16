@@ -1,0 +1,138 @@
+body {
+  margin: 0;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen",
+    "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue",
+    sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+/* body{
+  background-image: url(./image/#);
+} */
+
+code {
+  font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New",
+    monospace;
+}
+
+
+.white-text{
+  color: #FFFFFF;
+}
+
+.white-background{
+ background-color: rgba(210, 242, 255, 0.76);
+}
+
+.global{
+  text-align: center;
+  padding: 0px 10px;
+}
+
+.logo{
+  padding: 20px 0px;
+}
+
+.logo img{
+  max-width: 100px;
+}
+
+.global .logo-text{
+  display: inline;
+  padding: 40px 0px;
+  font-weight: bold;
+  color: #26272f;
+}
+
+.search-status{
+  font-size: 18px;
+  font-weight: bold;
+  padding: 18px 0;
+}
+
+.book-column{
+  min-height: 400px;
+  animation: fade-in 500ms ease-in-out; 
+}
+
+@keyframes fade-in{
+  0%{
+      opacity: 0;
+  }
+  100%{
+      opacity: 1;
+  }
+}
+
+.book-wrapper{
+  max-width: 300px;
+  margin: auto;
+  overflow: hidden;
+  background: #272830;
+  background-image: radial-gradient(90px at 50% 41%, #aac3cf -48%,rgba(0, 0, 0, 0) 209%);
+  margin-bottom: 35px;
+  border-radius: 4px;
+  /*border: 2px solid #272830;*/
+  position: relative;
+}
+
+.book-wrapper .btn{
+  width: 100%;
+  font-size: 20px;
+}
+
+.book-wrapper .btn-primary{
+  background: #67737d;
+  border: none;
+  border-radius: 0px;
+  padding: 10px 0;
+}
+
+.book-wrapper .btn-primary:hover, .btn-primary:active{
+  background-color: #515a63;
+  border: none;
+}
+
+.book{
+  display: block;
+  cursor: pointer;
+}
+
+.book:hover{
+  text-decoration: none;
+}
+
+.book .book-image-wrapper{
+  height: 240px;
+  padding-top: 40px;
+}
+
+.book-image-wrapper img{
+  max-width: 192px;
+}
+
+.book .book-price{
+  font-weight: bold;
+  font-size: 17px;
+  max-width: 45%;
+  text-align: left;
+  position: absolute;
+  top: 0;
+  padding: 6px;
+  background: #272830;
+  border-bottom-right-radius: 6px;
+  box-shadow: 1px 1px 25px -10px black;
+}
+
+.book .book-title{
+  background: #272830;
+  padding: 14px 10px;
+  display: border-box;
+  min-height: 100px;
+  position: relative;
+}
+
+.book-title h3{
+  margin: 0;
+}
