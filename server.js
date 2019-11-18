@@ -1,16 +1,24 @@
-const path = require('path');
-const express = require('express');
+const express = require("express");
+const path = require("path");
+const PORT = 3005;
+const app = express();
 
-module.exports = {
-  app: function () {
-    const app = express()
-    const indexPath = path.join(__dirname, '/./build/index.html')
-    const publicPath = express.static(path.join(__dirname, '/build/'))
-    
-    app.use('/build', publicPath)
-    app.get('/', function (_, res) { res.sendFile(indexPath) })
-
-    return app
-  }
+// Define middleware here
+app.use(express.urlencoded({ extended: true }));
+app.use(express.json());
+// Serve up static assets (usually on heroku)
+if (process.env.NODE_ENV === "production") {
+  app.use(express.static("client/build"));
 }
 
+// Define API routes here
+
+// Send every other request to the React app
+// Define any API routes before this runs
+app.get("*", (req, res) => {
+  res.sendFile(path.join(__dirname, "./client/build/index.html"));
+});
+
+app.listen(PORT, () => {
+  console.log(`🌎 ==> API server now on port ${PORT}!`);
+});
