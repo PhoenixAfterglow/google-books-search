@@ -45,12 +45,12 @@ class Search extends Component {
                             }}
                         />
                         <InputGroup.Append>
-                            <Button
+                            {/* <Button
                                 onClick={this.search}
                                 variant="outline-secondary" 
                             >
                                 Search
-                            </Button>
+                            </Button> */}
                         </InputGroup.Append>
                     </InputGroup>
                 </FormGroup>
